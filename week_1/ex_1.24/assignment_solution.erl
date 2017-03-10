@@ -1,4 +1,4 @@
--module(asgn1).
+-module(assignment_solution).
 -export([perimeter/1, area/1, enclose/1, bits/1]).
 
 % perimeter of shape
@@ -15,7 +15,7 @@ perimeter({circle, {_X,_Y}, R}) ->
 perimeter({triangle, {A,B,C}}) ->
     A+B+C.
 
-% area of shape
+% area of the shapes
 
 area({square, {_X,_Y}, {H}}) ->
     H*H;
@@ -35,7 +35,7 @@ area({triangle, {A,B,C}}) ->
 enclose({square, {X,Y}, {H}}) ->
     {{X,Y}, {X+H,Y+H}};
 
-enclose({rectagle, {X,Y}, {H,W}}) ->
+enclose({rectangle, {X,Y}, {H,W}}) ->
     {{X,Y}, {X+W,Y+H}};
 
 enclose({circle, {X,Y}, R}) ->
@@ -44,11 +44,11 @@ enclose({circle, {X,Y}, R}) ->
 % bits
 
 bits(N) ->
-    {_,_,S} = bitsNum(N,1,0), % return sum of bits
+    {_,_,S} = bitsNumber(N,1,0), % return sum of bits
     S.
 
 % N - input number to explore
-% C - tail recursion counter 
+% C - tail recursion counter
 % S - sum of bits that was matched
 
 % counter extend input number, return result
