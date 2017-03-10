@@ -1,0 +1,5 @@
+# Do not commit compiled code
+*.beam
+
+# Do not cimmit random crap
+.DS_Store
